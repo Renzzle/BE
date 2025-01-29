@@ -4,7 +4,8 @@
     pull_request:
       branches: [ "main"]
     push:
-      branches: [ "main", "fix/CD", "feat/userapi"]
+      branches: ["fix/CD"]
+
 
   permissions:
     write-all
@@ -71,5 +72,5 @@
             JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
           run: ./gradlew build -x test --stacktrace
 
-        - name: Test build success
-          run: echo "Build completed successfully!"
+#        - name: Test build success
+#          run: echo "Build completed successfully!"
